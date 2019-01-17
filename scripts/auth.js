@@ -9,4 +9,5 @@ signupForm.addEventListener("submit", e => {
 const email = signupForm["signup-email"].value;
 const password = signupForm["signup-password"].value;
 
-console.log(email, password);
+// signup user
+WebAuthentication.createUserWithEmailAndPassword(email, password);
