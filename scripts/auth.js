@@ -35,5 +35,9 @@ loginForm.addEventListener("submit", e => {
 
   auth.signInWithEmailAndPassword(email, password).then(cred => {
     console.log(cred.user);
+    //close the login modal and reset the form
+    const modal = document.querySelector("#modal-signup");
+    M.Modal.getInstance(modal).close();
+    signupForm.reset();
   });
 });
