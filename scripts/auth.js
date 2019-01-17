@@ -10,4 +10,4 @@ const email = signupForm["signup-email"].value;
 const password = signupForm["signup-password"].value;
 
 // signup user
-WebAuthentication.createUserWithEmailAndPassword(email, password);
+auth.createUserWithEmailAndPassword(email, password);
