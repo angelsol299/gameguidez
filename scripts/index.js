@@ -1,7 +1,10 @@
 const guideList = document.querySelector(".guides");
 
 //setup guides
-const setupGuides = data => {};
+const setupGuides = data => {
+  let html = "";
+  data.forEach(doc => {});
+};
 
 // setup materialize components
 document.addEventListener("DOMContentLoaded", function() {
