@@ -1,3 +1,8 @@
+const guideList = document.querySelector(".guides");
+
+//setup guides
+const setupGuides = data => {};
+
 // setup materialize components
 document.addEventListener("DOMContentLoaded", function() {
   var modals = document.querySelectorAll(".modal");
