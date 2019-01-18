@@ -7,7 +7,7 @@ auth.onAuthStateChanged(user => {
         setupGuides(snapshot.docs);
       });
   } else {
-    console.log("user logged out");
+    setupGuides([]);
   }
 });
 
