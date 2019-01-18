@@ -1,3 +1,8 @@
+//listen for auth changes
+auth.onAtuthStateChanged(user => {
+  console.log(user);
+});
+
 //sign up
 const signupForm = document.querySelector("#signup-form");
 signupForm.addEventListener("submit", e => {
