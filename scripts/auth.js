@@ -1,5 +1,9 @@
 //get data
-db.collection("guides").get();
+db.collection("guides")
+  .get()
+  .then(snapshot => {
+    console.log(snapshot.docs);
+  });
 
 //listen for auth changes
 auth.onAuthStateChanged(user => {
