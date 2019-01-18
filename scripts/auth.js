@@ -1,3 +1,6 @@
+//get data
+db.collection("guides").get();
+
 //listen for auth changes
 auth.onAuthStateChanged(user => {
   if (user) {
