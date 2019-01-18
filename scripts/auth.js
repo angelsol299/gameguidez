@@ -1,6 +1,10 @@
 //listen for auth changes
 auth.onAuthStateChanged(user => {
-  console.log(user);
+  if (user) {
+    console.log("user logged in:", user);
+  } else {
+    console.log("user logged out");
+  }
 });
 
 //sign up
