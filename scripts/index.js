@@ -4,7 +4,9 @@ const loggedOutLinks = document.querySelectorAll(".logged-in");
 
 const setupUI = user => {
   if (user) {
-    //toggel UI elemetns
+    //toggel UI elements
+    loggedOutLinks.forEach(item => (item.style.display = "block"));
+    loggedOutLinks.forEach(item => (item.style.display = "none"));
   }
 };
 
