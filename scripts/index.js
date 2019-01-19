@@ -1,6 +1,6 @@
 const guideList = document.querySelector(".guides");
 const loggedOutLinks = document.querySelectorAll(".logged-out");
-const loggedOutLinks = document.querySelectorAll(".logged-in");
+const loggedInLinks = document.querySelectorAll(".logged-in");
 
 const setupUI = user => {
   if (user) {
