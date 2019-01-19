@@ -1,4 +1,12 @@
 const guideList = document.querySelector(".guides");
+const loggedOutLinks = document.querySelectorAll(".logged-out");
+const loggedOutLinks = document.querySelectorAll(".logged-in");
+
+const setupUI = user => {
+  if (user) {
+    //toggel UI elemetns
+  }
+};
 
 //setup guides
 const setupGuides = data => {
