@@ -5,11 +5,11 @@ const loggedOutLinks = document.querySelectorAll(".logged-in");
 const setupUI = user => {
   if (user) {
     //toggel UI elements
-    loggedOutLinks.forEach(item => (item.style.display = "block"));
+    loggedInLinks.forEach(item => (item.style.display = "block"));
     loggedOutLinks.forEach(item => (item.style.display = "none"));
   } else {
     //toggel UI elements
-    loggedOutLinks.forEach(item => (item.style.display = "none"));
+    loggedInLinks.forEach(item => (item.style.display = "none"));
     loggedOutLinks.forEach(item => (item.style.display = "block"));
   }
 };
