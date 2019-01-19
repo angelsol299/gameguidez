@@ -7,6 +7,10 @@ const setupUI = user => {
     //toggel UI elements
     loggedOutLinks.forEach(item => (item.style.display = "block"));
     loggedOutLinks.forEach(item => (item.style.display = "none"));
+  } else {
+    //toggel UI elements
+    loggedOutLinks.forEach(item => (item.style.display = "none"));
+    loggedOutLinks.forEach(item => (item.style.display = "block"));
   }
 };
 
