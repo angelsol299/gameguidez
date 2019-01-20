@@ -9,6 +9,7 @@ const setupUI = user => {
     const html = `
       <div>Logged in as ${user.email}</div>
     `;
+    accountDetails.innerHTML = html;
     //toggel UI elements
     loggedInLinks.forEach(item => (item.style.display = "block"));
     loggedOutLinks.forEach(item => (item.style.display = "none"));
