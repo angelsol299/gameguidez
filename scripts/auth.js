@@ -1,12 +1,10 @@
 //listen for auth changes
 auth.onAuthStateChanged(user => {
   if (user) {
-    db.collection("guides")
-      .get()
-      .then(snapshot => {
-        setupGuides(snapshot.docs);
-        setupUI(user);
-      });
+    db.collection("guides").onSnapshot(snapshot => {
+      setupGuides(snapshot.docs);
+      setupUI(user);
+    });
   } else {
     setupUI();
     setupGuides([]);
@@ -29,7 +27,9 @@ createForm.addEventListener("submit", e => {
       M.Modal.getInstance(modal).close();
       createForm.reset();
     })
-    .catch(err => {});
+    .catch(err => {
+      console.log(err.message);
+    });
 });
 
 //sign up
