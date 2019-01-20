@@ -23,7 +23,12 @@ createForm.addEventListener("submit", e => {
       title: createForm["title"].value,
       content: createForm["content"].value
     })
-    .then(() => {});
+    .then(() => {
+      //close the modal and reset form
+      const modal = document.querySelector("#modal-create");
+      M.Modal.getInstance(modal).close();
+      signupForm.reset();
+    });
 });
 
 //sign up
