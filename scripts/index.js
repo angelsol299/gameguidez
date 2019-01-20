@@ -7,6 +7,7 @@ const setupUI = user => {
   if (user) {
     //account info
     const html = `
+      <div>Logged in as ${user.email}</div>
     `;
     //toggel UI elements
     loggedInLinks.forEach(item => (item.style.display = "block"));
