@@ -1,6 +1,5 @@
 //listen for auth changes
 auth.onAuthStateChanged(user => {
-  console.log(user);
   if (user) {
     db.collection("guides").onSnapshot(snapshot => {
       setupGuides(snapshot.docs);
