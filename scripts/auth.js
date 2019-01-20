@@ -27,7 +27,7 @@ createForm.addEventListener("submit", e => {
       //close the modal and reset form
       const modal = document.querySelector("#modal-create");
       M.Modal.getInstance(modal).close();
-      signupForm.reset();
+      createForm.reset();
     });
 });
 
