@@ -17,6 +17,10 @@ auth.onAuthStateChanged(user => {
 const createForm = document.querySelector("#create-form");
 createForm.addEventListener("submit", e => {
   e.preventDefault();
+
+  db.collection("guides").add({
+    title: createForm["title"].value
+  });
 });
 
 //sign up
