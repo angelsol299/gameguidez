@@ -5,6 +5,9 @@ const accountDetails = document.querySelector(".account-details");
 
 const setupUI = user => {
   if (user) {
+    //account info
+    const html = `
+    `;
     //toggel UI elements
     loggedInLinks.forEach(item => (item.style.display = "block"));
     loggedOutLinks.forEach(item => (item.style.display = "none"));
