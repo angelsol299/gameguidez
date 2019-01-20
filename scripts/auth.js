@@ -13,6 +13,12 @@ auth.onAuthStateChanged(user => {
   }
 });
 
+//create new guide
+const createForm = document.querySelector("#create-form");
+createForm.addEventListener("submit", e => {
+  e.preventDefault();
+});
+
 //sign up
 const signupForm = document.querySelector("#signup-form");
 signupForm.addEventListener("submit", e => {
