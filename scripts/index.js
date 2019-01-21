@@ -6,10 +6,16 @@ const accountDetails = document.querySelector(".account-details");
 const setupUI = user => {
   if (user) {
     //account info
-    const html = `
+    db.collection("users")
+      .doc(user.uid)
+      .get()
+      .then(doc => {
+        const html = `
       <div>Logged in as ${user.email}</div>
-    `;
-    accountDetails.innerHTML = html;
+      `;
+        accountDetails.innerHTML = html;
+      });
+
     //toggel UI elements
     loggedInLinks.forEach(item => (item.style.display = "block"));
     loggedOutLinks.forEach(item => (item.style.display = "none"));
