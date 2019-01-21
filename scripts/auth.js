@@ -43,6 +43,7 @@ signupForm.addEventListener("submit", e => {
 
   // signup user
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    return db.collection("users").doc(cred.user.uid);
     const modal = document.querySelector("#modal-signup");
     M.Modal.getInstance(modal).close();
     signupForm.reset();
